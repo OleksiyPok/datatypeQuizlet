@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python Quiz - Level 2</title>
+    <title>Python Quiz - Level 4</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="nav"><a href="index.html">Home</a></div>
-    <div class="nav">
-      <a href="level1.html">Level 1</a> | <a href="level2.html">Level 2</a> | <a href="level3.html">Level 3</a> |
-      <a href="level4.html">Level 4</a>
-    </div>
+    <div class="nav"><a href="level1.html">Level 1</a> | <a href="level2.html">Level 2</a> | <a href="level3.html">Level 3</a> | <a href="level4.html">Level 4</a></div>
 
-    <h1>Python Beginner Quiz - Level 2</h1>
+    <h1>Python Beginner Quiz - Level 4</h1>
     <div class="quiz-container" id="quiz"></div>
     <button onclick="checkAnswers()">Check Answers</button>
     <div class="footer-name">Oleksii Pokormiakho</div>
@@ -21,58 +18,30 @@
     <script>
       const quizData = [
         {
-          question: "What is printed by the following code?",
-          code: "x = 10\nx += 5\nprint(x)",
-          options: ["10", "5", "15", "105"],
-          answer: 2,
-        },
-        {
-          question: "Get the length of list my_list?",
-          options: ["my_list.size()", "len(my_list)", "my_list.length", "length(my_list)"],
+          question: "What is the result of the following code?",
+          code: "my_list = [10, 20, 30]\nprint(my_list[1])",
+          options: ["10", "20", "30", "Error"],
           answer: 1,
         },
         {
-          question: "Which is a tuple?",
-          options: ["[1,2,3]", "(1,2,3)", "{1,2,3}", "<1,2,3>"],
-          answer: 1,
-        },
-        {
-          question: "Output of the following code?",
-          code: "for i in range(3):\n    print(i)",
-          options: ["1 2 3", "0 1 2", "0 1 2 3", "3 2 1"],
-          answer: 1,
-        },
-        {
-          question: "Keyword to handle exceptions?",
-          options: ["try", "catch", "error", "except"],
+          question: "How do you access the value associated with key 'name' in a dictionary 'person'?",
+          options: ["person['name']", "person(name)", "person.name", "person.get['name']"],
           answer: 0,
         },
         {
-          question: 'What does "hello".upper() return?',
-          options: ['"HELLO"', '"hello"', '"Hello"', '"heLLo"'],
-          answer: 0,
-        },
-        {
-          question: "Check if x is even:",
-          code: "if x % 2 == 0:\n    print('Even')",
-          options: ["x / 2 == 0", "x % 2 == 0", "x // 2 == 0", "x * 2 == 0"],
+          question: "Which operator checks if a value exists in a list?",
+          options: ["has", "in", "exist", "contains"],
           answer: 1,
         },
         {
-          question: "Create empty dictionary:",
-          options: ["{}", "[]", "()", "dict[]"],
-          answer: 0,
-        },
-        {
-          question: "Output of the following code?",
-          code: "a = [1,2,3]\nprint(a[1])",
-          options: ["1", "2", "3", "[2]"],
+          question: "What does the expression:",
+          code: "my_string[1:4] return?",
+          options: ["Single character", "Substring", "Error", "List of characters"],
           answer: 1,
         },
         {
-          question: "Output of the following code?",
-          code: "x = 3\ny = 4\nprint(x*y)",
-          options: ["7", "12", "34", "1"],
+          question: "What happens if you try to access a non-existing key using dict.get('x')?",
+          options: ["Raises an error", "Returns None", "Returns False", "Creates the key"],
           answer: 1,
         },
       ];

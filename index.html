@@ -3,127 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python Data Types Quiz</title>
+    <title>Python Quiz Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <!-- version: 1.0 -->
   <body>
-    <div class="quiz-container">
-      <h1>Python Data Types Quiz</h1>
-      <form id="quizForm">
-        <div class="question">1. Which data type is immutable in Python?</div>
-        <div class="options">
-          <label><input type="radio" name="q1" value="A" />list</label>
-          <label><input type="radio" name="q1" value="B" />dict</label>
-          <label><input type="radio" name="q1" value="C" />set</label>
-          <label><input type="radio" name="q1" value="D" />tuple</label>
-        </div>
-        <div class="explanation" id="exp1"></div>
-
-        <div class="question">2. What is the type of the value returned by <code>type(3.0)</code>?</div>
-        <div class="options">
-          <label><input type="radio" name="q2" value="A" />int</label>
-          <label><input type="radio" name="q2" value="B" />float</label>
-          <label><input type="radio" name="q2" value="C" />complex</label>
-          <label><input type="radio" name="q2" value="D" />str</label>
-        </div>
-        <div class="explanation" id="exp2"></div>
-
-        <div class="question">3. Which data type allows duplicate values and keeps the order?</div>
-        <div class="options">
-          <label><input type="radio" name="q3" value="A" />set</label>
-          <label><input type="radio" name="q3" value="B" />dict</label>
-          <label><input type="radio" name="q3" value="C" />list</label>
-          <label><input type="radio" name="q3" value="D" />tuple</label>
-        </div>
-        <div class="explanation" id="exp3"></div>
-
-        <div class="question">
-          4. What is the output type of this code?<br />
-          <br />
-          <code>x = {"a", "b", "c"}<br />print(type(x))</code>
-        </div>
-        <br />
-        <div class="options">
-          <label><input type="radio" name="q4" value="A" />&lt;class 'dict'&gt;</label>
-          <label><input type="radio" name="q4" value="B" />&lt;class 'set'&gt;</label>
-          <label><input type="radio" name="q4" value="C" />&lt;class 'list'&gt;</label>
-          <label><input type="radio" name="q4" value="D" />&lt;class 'tuple'&gt;</label>
-        </div>
-        <div class="explanation" id="exp4"></div>
-
-        <div class="question">
-          5. What is the result of this code?<br />
-          <br />
-          <code>nums = {1, 2, 3}<br />print(4 in nums)</code>
-        </div>
-        <br />
-        <div class="options">
-          <label><input type="radio" name="q5" value="A" />True</label>
-          <label><input type="radio" name="q5" value="B" />False</label>
-          <label><input type="radio" name="q5" value="C" />Error</label>
-          <label><input type="radio" name="q5" value="D" />None</label>
-        </div>
-        <div class="explanation" id="exp5"></div>
-
-        <button type="button" class="btn" onclick="checkAnswers()">Check Answers</button>
-        <div id="result"></div>
-      </form>
+    <div class="nav">
+      <a href="level1.html">Level 1</a> | <a href="level2.html">Level 2</a> |
+      <a href="level3.html">Level 3</a>
     </div>
 
-    <script>
-      function checkAnswers() {
-        const correctAnswers = {
-          q1: "D",
-          q2: "B",
-          q3: "C",
-          q4: "B",
-          q5: "B",
-        };
+    <h1>Welcome to Python Quiz</h1>
+    <p style="text-align: center; font-size: 18px">Select a level to start practicing:</p>
 
-        const explanations = {
-          q1: "Tuple is immutable, meaning its elements cannot be changed after creation. Lists, dicts, and sets are mutable.",
-          q2: "3.0 is a floating point number, so type(3.0) returns float.",
-          q3: "List allows duplicate values and preserves the order. Sets remove duplicates, tuples preserve order but can’t be changed.",
-          q4: "x is a set, so type(x) returns <class 'set'>.",
-          q5: "4 is not in the set nums = {1,2,3}, so '4 in nums' evaluates to False.",
-        };
-
-        let score = 0;
-        const total = Object.keys(correctAnswers).length;
-
-        for (let key in correctAnswers) {
-          const answer = document.querySelector(`input[name="${key}"]:checked`);
-          const expDiv = document.getElementById(`exp${key.slice(1)}`);
-          if (answer) {
-            if (answer.value === correctAnswers[key]) {
-              score++;
-              expDiv.textContent = "Correct ✅ " + explanations[key];
-              expDiv.style.backgroundColor = "#d4edda";
-              expDiv.style.color = "#155724";
-            } else {
-              expDiv.textContent = "Incorrect ❌ " + explanations[key];
-              expDiv.style.backgroundColor = "#f8d7da";
-              expDiv.style.color = "#721c24";
-            }
-          } else {
-            expDiv.textContent = "No answer selected. " + explanations[key];
-            expDiv.style.backgroundColor = "#fff3cd";
-            expDiv.style.color = "#856404";
-          }
-        }
-
-        const result = document.getElementById("result");
-        result.textContent = `You got ${score} out of ${total} correct.`;
-
-        if (score === total) {
-          result.style.color = "green";
-        } else if (score >= 3) {
-          result.style.color = "orange";
-        } else {
-          result.style.color = "red";
-        }
-      }
-    </script>
+    <div class="quiz-container" style="text-align: center">
+      <a href="level1.html"><button>Level 1 - Beginner</button></a>
+      <a href="level2.html"><button>Level 2 - Intermediate</button></a>
+      <a href="level3.html"><button>Level 3 - Data Types</button></a>
+    </div>
   </body>
 </html>
